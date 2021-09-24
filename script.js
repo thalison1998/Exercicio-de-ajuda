@@ -9,7 +9,10 @@ const create = () => {
 
 const removeDiv = () => {
     const divs = containerDivs.querySelector(".divs")
-    containerDivs.removeChild(divs)
+    if(containerDivs.children.length > 0){
+      containerDivs.removeChild(divs)  
+    }
+    
 }
 
 inputCreateDiv.addEventListener('change',()=>{
